@@ -1,23 +1,19 @@
-import { useRef, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 // import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button,Offcanvas, Collapse, Dropdown, DropdownButton, DropdownItem, DropdownMenu, DropdownToggle, Navbar, NavbarCollapse, Nav, } from 'react-bootstrap';
+import {  Dropdown, Navbar, Nav } from 'react-bootstrap';
 import './my_nav.css'
 
 
 // import reefhome from './my_home.jsx'
 
 
-function My_nav(props) {
-
-let homee = props.home;
- let about = props.about;
+function My_nav() {
 
 
- let omhomeclick = ()=>{
-    homee.current.scrollIntoView();
- }
+
+
+
 
     return ( 
     <>
@@ -28,12 +24,12 @@ let homee = props.home;
             
                 <Nav className=' d-md-flex  d-none ms-5 '>
                 
-                    <Nav.Link  className='ss ms-5 p-1' ref={homee}>HOME </Nav.Link>
-                    <Nav.Link className='ss ms-3 p-1' ref={about}>ABOUT </Nav.Link>               
-                    <Nav.Link className='ss ms-3 p-1'>TEAM </Nav.Link>
-                    <Nav.Link className='ss ms-3 p-1'>SERVICE</Nav.Link>
-                    <Nav.Link className='ss ms-3 p-1'>PORTOFOLIO</Nav.Link>
-                    <Nav.Link className='ss ms-3 p-1'>CONTACT</Nav.Link>
+                    <Nav.Link >HOME </Nav.Link>
+                    <Nav.Link >ABOUT </Nav.Link>               
+                    <Nav.Link >TEAM </Nav.Link>
+                    <Nav.Link >SERVICE</Nav.Link>
+                    <Nav.Link >PORTOFOLIO</Nav.Link>
+                    <Nav.Link >CONTACT</Nav.Link>
                 </Nav>
             
             <Dropdown  className=' d-sm-block d-md-none'>
@@ -51,15 +47,6 @@ let homee = props.home;
                 </Dropdown.Menu>
             </Dropdown>
         </Navbar>
-                {/* <Offcanvas show={show} onHide={handleClose} placement="top" className="mt-5">
-                    <Offcanvas.Header closeButton>
-                    <Offcanvas.Title>Offcanvas</Offcanvas.Title>
-                </Offcanvas.Header>
-                <Offcanvas.Body>
-                    Some text as placeholder. In real life you can have the elements you
-                    have chosen. Like, text, images, lists, etc.
-                </Offcanvas.Body>
-            </Offcanvas> */}
     </div>
     </>
     );
